@@ -263,11 +263,11 @@
     }
 
     /* Publication section */
-    .publications-section {
+    /* .publications-section {
       margin-top: 25px;
-    }
+    } */
 
-    .publication {
+    /* .publication {
       margin-bottom: 20px;
       padding: 16px;
       border-radius: 8px;
@@ -306,7 +306,7 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-    }
+    } */
 
     /* Button styles */
     a.button {
@@ -329,10 +329,10 @@
       transform: translateY(-1px);
     }
 
-    .publication-links a.button {
+    /* .publication-links a.button {
       font-size: 12px;
       padding: 4px 8px;
-    }
+    } */
 
     /* Footer styles */
     footer {
@@ -347,6 +347,43 @@
       height: 1px;
       background-color: var(--border-color);
       margin: 20px 0;
+    }
+
+    .projects-section {
+      margin-bottom: 25px;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0px;
+      align-items: flex-start;
+    }
+
+    .projects-header {
+      margin-bottom: 20px;
+    }
+
+    .project {
+      margin-bottom: 20px;
+      padding: 16px;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+    }
+
+    .project:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .project title {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-color);
     }
 
     /* Responsive styles */
@@ -410,15 +447,7 @@
             <p>
               Hello! I am a first-year MIIS student at the <a href="https://lti.cs.cmu.edu/">Language Technologies Institute</a> at Carnegie Mellon University.
               I am interested in furthering the state of the art in Large Language Models(LLMs) and making LLMs usable beyond chat. I want to approach this grand goal by applying Reinforcement Learning, Data Centric pretraining and AI Agents.</p>
-            <p> Previously, I worked as a data engineer at Texas Instruments working in the end-to-end data lifecycle from data collection to model development, deployment and monitoring. I completed my Bachelors in Artificial Intelligence from Indian Institute of Technology, Hyderabad.</p>
-              
-            <!-- </p>
-
-            <p> -->
-              <!-- I graduated with a Bachelor's in Computer Science in the summer of 2024, from the
-              <a href="https://www.bits-pilani.ac.in/">Birla Institute of Technology and Science (BITS) Pilani, India</a>. -->
-    
-        
+            <p> Previously, I worked as a data engineer at Texas Instruments working in the end-to-end data lifecycle from data collection to model development, deployment and monitoring. I completed my Bachelors in Artificial Intelligence from Indian Institute of Technology, Hyderabad.</p>  
           </div>
 
           <div class="profile-links">
@@ -437,6 +466,83 @@
         <div class="profile-image">
           <img src="images/square_img.jpg" alt="Dishank Jain" class="profile-photo">
         </div>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <heading><b>Projects</b></heading>
+      <div class="projects-container">
+        <a href="https://github.com/Dishank422/multimodal-question-answering">
+          <div class="project">
+            <title>Multimodal Question Answering</title>
+            <p>
+              Developed a model for multimodal reasoning, enabling it to solve grade school puzzles by analyzing both images and text. Finetuned InstructBlip2 model consisting of 13 billion parameters. Used 4-bit Quantization and Low rank adaptation of ​transformers to fit the model on a single 40 Gb GPU.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ananthoju-Pranav-Sai/IVP_Project">
+          <div class="project">
+            <title>3D Object Reconstruction</title>
+            <p>
+              Built a model to generate a 3D point cloud of an object using only one image of the object. First generated point clouds from ​different viewpoints. Then fused them after rotation
+            </p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Dishank422/RL">
+          <div class="project">
+            <title>Reinforcement Learning</title>
+            <p>
+              Implemented various Deep Reinforcement Learning Algorithms like Q Learning, Reinforce, Monte Carlo Tree Search and Bandit Algorithms and applied them to games like Lunar Lander, Tic-Tac-Toe and Pong.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Dishank422/AI2100-Deep-learning/tree/main/project">
+          <div class="project">
+            <title>Explainability in Question Answering</title>
+            <p>
+              Fine tuned a BERT model for Question Answering and used methods like Saliency Maps, Integrated Gradients and T-SNE to explain outputs from the BERT model.
+            </p>
+          </div>
+        </a>
+
+        <a>
+          <div class="project">
+            <title>Data Pipeline for dynamic data loading</title>
+            <p>
+              Developed a big data pipeline for moving 200GB of data daily using Pyspark resulting in cost savings of $8M annually. Deployed using Airflow and Kubernetes.
+            </p>
+          </div>
+        </a>
+
+        <a>
+          <div class="project">
+            <title>Long Landing Prediction</title>
+            <p>
+              Designed a methodology to recognize Long Landing Events crucial for flight safety. Handled 250 Gb of flight data. Performed Data Mining and developed a Gradient Boosting model capable of predicting Landing Distance with a mean error of only 65 meters.
+            </p>
+          </div>
+        </a>
+
+        <a>
+          <div class="project">
+            <title>RAG for Factory Assistance</title>
+            <p>
+              Built a multilingual RAG system capable of quering Documents and Videos in multiple languages.
+            </p>
+          </div>
+        </a>
+
+        <a>
+          <div class="project">
+            <title>AI Agents</title>
+            <p>
+              Built an agent to automate manual tasks in manufacturing processes. Able to work in ambiguous environments, interact with non-technical users and collect correct input information for the task at hand.
+            </p>
+          </div>
+        </a>
       </div>
     </section>
 
